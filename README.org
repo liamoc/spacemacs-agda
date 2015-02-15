@@ -41,7 +41,7 @@ These are loosely based on the original emacs bindings (which still work, if you
    | =<SPC> mh=  | =agda2-helper-function-type=               | Helper function type                       |
    | =<SPC> md=  | =agda2-infer-type-maybe-toplevel=          | Infer (deduce) type                        |
    | =<SPC> mw=  | =agda2-why-in-scope-maybe-toplevel=        | Explain why a particular name is in scope  |
-   | =<SPC> m, = | =agda2-goal-and-context=                   | Goal type, and context                     |
+   | ~<SPC> m,~ | =agda2-goal-and-context=                   | Goal type, and context                     |
    | =<SPC> m.=  | =agda2-goal-and-context-and-inferred=      | Goal type, context, and inferred type      |
    | =<SPC> mo=  | =agda2-module-and-contents-maybe-toplevel= | Module contents                            |
    | =<SPC> mn=  | =agda2-compute-normalised-maybe-toplevel=  | Evaluate an expression to normal form      |
