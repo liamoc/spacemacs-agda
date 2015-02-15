@@ -1,0 +1,50 @@
+* Agda Layer for Spacemacs
+
+This is a very rudimentary agda layer for spacemacs.
+
+It loads Agda-mode automatically using the =agda-mode= executable. Ensure it is in your =$PATH=.
+
+On OSX, you will have to do this by adding to your =dotspacemacs/init= function, as emacs for OS X ignores your =$PATH=.
+
+#+BEGIN_SRC #+begin_src emacs-lisp
+  (defun dotspacemacs/init ()
+    (add-to-list 'exec-path "~/.cabal/bin/")
+    (add-to-list 'exec-path "~/bin/")
+  )
+#+end_src
+
+** Key bindings
+
+
+These are loosely based on the original emacs bindings (which still work, if you need them).
+
+
+   | Key command | =M-x= command                              | Description                                |
+   |-------------+--------------------------------------------+--------------------------------------------|
+   | =<SPC> mm=  | =agda2-load=                               | Load                                       |
+   | =<SPC> mC=  | =agda2-comple=                             | Compile                                    |
+   | =<SPC> mQ=  | =agda2-quit=                               | Quit                                       |
+   | =<SPC> mR=  | =agda2-restart=                            | Restart Agda                               |
+   | =<SPC> mD=  | =agda2-remove-annotations=                 | Deactivate (remove highlighting and goals) |
+   | =<SPC> mim= | =agda2-display-implicit-arguments=         | Toggle display of implicit arguments       |
+   | =<SPC> m==  | =agda2-show-constraints=                   | Show constraints                           |
+   | =<SPC> ms=  | =agda2-solve-constraints=                  | Solve constraints                          |
+   | =<SPC> m?=  | =agda2-show-goals=                         | Show goals                                 |
+   | =<SPC> mj=  | =agda2-next-goal=                          | Next goal                                  |
+   | =<SPC> mk=  | =agda2-previous-goal=                      | Previous goal                              |
+   | =<SPC> mg=  | =agda2-give=                               | Give                                       |
+   | =<SPC> mr=  | =agda2-refine=                             | Refine                                     |
+   | =<SPC> ma=  | =agda2-auto=                               | Auto (agsy)                                |
+   | =<SPC> mc=  | =agda2-make-case=                          | Case split                                 |
+   | =<SPC> mt=  | =agda2-goal-type=                          | Display goal type                          |
+   | =<SPC> me=  | =agda2-show-context=                       | Show context (environment)                 |
+   | =<SPC> mh=  | =agda2-helper-function-type=               | Helper function type                       |
+   | =<SPC> md=  | =agda2-infer-type-maybe-toplevel=          | Infer (deduce) type                        |
+   | =<SPC> mw=  | =agda2-why-in-scope-maybe-toplevel=        | Explain why a particular name is in scope  |
+   | =<SPC> m,=  | =agda2-goal-and-context=                   | Goal type, and context                     |
+   | =<SPC> m.=  | =agda2-goal-and-context-and-inferred=      | Goal type, context, and inferred type      |
+   | =<SPC> mo=  | =agda2-module-and-contents-maybe-toplevel= | Module contents                            |
+   | =<SPC> mn=  | =agda2-compute-normalised-maybe-toplevel=  | Evaluate an expression to normal form      |
+   |-------------+--------------------------------------------+--------------------------------------------|
+
+
